@@ -1,4 +1,4 @@
-# 米饭主页及文档项目
+# Easy插件主页及文档项目
 
 ## 技术选型
 
@@ -7,7 +7,7 @@
 
 ## 资源和托管
 
-1. 主页和文档的页面托管于[github](https://www.github.com/) ，域名`ljxmc.top`自己持有。
+1. 主页和文档的页面托管于[github](https://www.github.com/) ，域名自己持有。
 
 ## 文档结构
 
