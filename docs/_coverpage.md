@@ -4,8 +4,8 @@
 
 > 张扬的 Minecraft插件文档大全.
 
-* [EasyGuishop](https://www.mcbbs.net/thread-1321609-1-1.html)
+* [EasyGuiShop](https://www.mcbbs.net/thread-1321609-1-1.html)
 * [EsayPVP](https://www.mcbbs.net/thread-1339244-1-1.html)
 
-[Gitee](https://gitee.com/handy-git/rice-doc)
+[Gitee](https://github.com/XiaoHua013/easy.github.io/)
 [快速开始](#简式插件列表)
