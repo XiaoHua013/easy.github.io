@@ -1,7 +1,9 @@
 <!-- docs/EasyGuiShop/zh_CN/README.md -->
 
 # 前言
-> 这是EasyGuiShop-2.x版本的WIKI  
+> 这是EasyGuiShop-2.x版本的WIKI
+> 
+##效果图请看[**有个栗子🌰**](EasyGuiShop/zh_CN/card)模块     有功能不懂请看[**功能帮助**](EasyGuiShop/zh_CN/help)模块
 
 ## 一、简介
 > EasyGuiShop是一款有点好用且比较简便的GUI商店，这个插件模仿淘宝店铺，玩家可以开自己的店铺  
