@@ -2,6 +2,7 @@
 * [首页](EasyGuiShop/zh_CN/README)
 * [首次安装](EasyGuiShop/zh_CN/install)
 * [**命令权限**](EasyGuiShop/zh_CN/command)
+* [**命令权限2**](EasyGuiShop/zh_CN/cm)
 * [**变量支持**](EasyGuiShop/zh_CN/papi)
 * [**新增功能**](EasyGuiShop/zh_CN/add)
 * [**有个栗子🌰**](EasyGuiShop/zh_CN/card)
