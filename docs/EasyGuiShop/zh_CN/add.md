@@ -1,58 +1,66 @@
-<!-- docs/PlayerTitle/zh_CN/add.md -->
+### 新增称号指令
 
-## 例子
-说明:
-```
-/plt add [获取条件] [条件数量] [金额] (天数) (是否隐藏) (玩家名)
-添加一个新称号到称号商城
-获取条件：not(无条件) vault(金币) playerpoints(点卷) coin(称号币) itemStack(物品名) 
-条件数量：上方所选条件所需数量
-天数:天数只能为正整数,0为永久
-是否隐藏:false隐藏 true显示
-玩家名:填写后会新增到称号商城的同时直接发给该玩家
-[] 的为必填项  () 的为选填
-```
+> /plt title add [称号类型] [称号名称] [金额] (天数) (是否隐藏) (称号描述)
 
-注意:
-下面例子中最后一个参数为0就是购买称号后玩家持有时间为永久
-玩家称号过期是按照登录时候进行判断删除过期称号
+#### 称号类型分为:
+* not: 无条件
+* vault: 金币 
+* playerPoints: 点券 
+* coin: 称号币
+* itemStack: 物品
+* permission: 权限
+* activity: 活动
+
+#### 金额/数量
+* 类型: 金币,点券,称号币 -> 购买价格
+* 类型: 物品 -> 需求数量(需主手持对应物品)
+* 类型: 其他 -> 无用
+
+#### 天数
+* 称号出售的天数,只能为正整数,0为永久
+
+#### 是否隐藏
+* false隐藏(不会显示在plt shop中) true显示
+#### 描述
+* 称号描述可使用英文逗号 **,** 进行换行
+
+### 额外注意事项
+* [] 的为必填项  () 的为选填
+
+### 例子
 
 1. 新增: 白嫖者称号 玩家点击即可获取永久
 ```
-/plt add not &f白嫖者 0 0
+/plt title add not &e白嫖称号 0 0 true 这是称号描述,这是第二行
 ```
 
 2. 新增: 金币称号  玩家需要消耗666金币来获取6天(需:Vault支持)
 ```
-/plt add vault &e金币 666 6
+/plt title add vault &e金币称号 666 6 true 这是个金币称号
 ```
 
-3. 新增:点券称号 玩家需要消耗666金币来获取6天(需:PlayerPoints支持)
+3. 新增:点券称号 玩家需要消耗666点券来获取6天(需:PlayerPoints支持)
 ```
-/plt add playerPoints &e点券 666 6
+/plt title add playerPoints &e点券称号 666 0 false 这是个隐藏起来的点券称号
 ```
+
 4. 新增:钻石剑称号 玩家需要消耗钻石剑1个来获取永久称号
-   备注:需要手持原版钻石剑来输入该命令
+   备注:需要手持钻石剑来输入该命令
 ```
-/plt add itemStack &e钻石剑 1 0
-```
-5. 新增: rpg物品称号: 玩家需要消耗rpg物品1个来获取6天
-   备注:需要手持rpg物品来输入该命令
-```
-/plt add itemStack &erpg称号 1 6
-```
-6. 新增: 称号币称号: 玩家需要消耗称号币666来获取6天
-```
-/plt add coin &e称号币称号 666 6
+/plt title add itemStack &e钻石剑称号 1 0 false 需要手持钻石剑来输入该命令
 ```
 
-## 截图说明
-[![WXVAo9.png](https://z3.ax1x.com/2021/07/30/WXVAo9.png)](https://imgtu.com/i/WXVAo9)
-[![WXVViR.png](https://z3.ax1x.com/2021/07/30/WXVViR.png)](https://imgtu.com/i/WXVViR)
-[![WXVkdJ.png](https://z3.ax1x.com/2021/07/30/WXVkdJ.png)](https://imgtu.com/i/WXVkdJ)
-[![WXVFZ4.png](https://z3.ax1x.com/2021/07/30/WXVFZ4.png)](https://imgtu.com/i/WXVFZ4)
-[![WXVPLF.png](https://z3.ax1x.com/2021/07/30/WXVPLF.png)](https://imgtu.com/i/WXVPLF)
-[![WXVZJ1.png](https://z3.ax1x.com/2021/07/30/WXVZJ1.png)](https://imgtu.com/i/WXVZJ1)
-[![WXVeRx.png](https://z3.ax1x.com/2021/07/30/WXVeRx.png)](https://imgtu.com/i/WXVeRx)
-[![WXVKsO.png](https://z3.ax1x.com/2021/07/30/WXVKsO.png)](https://imgtu.com/i/WXVKsO)
-[![WXVuQK.png](https://z3.ax1x.com/2021/07/30/WXVuQK.png)](https://imgtu.com/i/WXVuQK)
+5. 新增: 称号币称号: 玩家需要消耗称号币666来获取6天
+```
+/plt title add coin &e称号币称号 666 6 true 这是个称号币称号
+```
+
+6. 新增: 权限称号: 玩家有权限**test**登录后自动获取
+```
+/plt title add permission 权限称号 test 0 true 这是个权限称号,玩家有权限**test**登录后自动获取
+```
+
+7. 新增: 活动称号: 这类称号无法购买,只能OP指令给予
+```
+/plt title add activity 活动称号 0 0 true 这是个活动称号,只能op给予
+```
