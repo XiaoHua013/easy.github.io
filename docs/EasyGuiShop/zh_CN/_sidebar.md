@@ -1,6 +1,6 @@
-# PlayerTitle
+# EasyGuiShop
 * [首页](EasyGuiShop/zh_CN/README)
-* [首页](EasyGuiShop/zh_CN/install)
+* [首次安装](EasyGuiShop/zh_CN/install)
 * [**命令权限**](EasyGuiShop/zh_CN/command)
 * [**变量支持**](EasyGuiShop/zh_CN/papi)
 * [**新增称号**](EasyGuiShop/zh_CN/add)
