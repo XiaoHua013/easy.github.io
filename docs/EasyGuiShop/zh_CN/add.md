@@ -1,66 +1,39 @@
 ### 新增称号指令
 
-> /plt title add [称号类型] [称号名称] [金额] (天数) (是否隐藏) (称号描述)
-
-#### 称号类型分为:
-* not: 无条件
+> /egs help        查看帮助。
+> /egs correctYaml        对所有Yaml进行更正，不会重新载入，请执行后执行reload。
+> /egs reload        重新载入。
+> /egs openGui        打开界面。
+> /egs createIcon <图标名字>        增加图标，需要手持物品。
+> /egs setIconVaultPrice <图标名字> <价格>        设置价格。
+> /egs setIconItemPrice <图标名字> <价格>        设置价格，需要手持物品。
+> /egs setIconPlayerPointsPrice <图标名字> <价格>        设置价格。
+> /egs setIconExperiencePrice <图标名字> <价格>        设置价格。
+> /egs setIconLimitTime <图标名字> <时间>        设置限购时间。
+> /egs setIconSystem <图标名字> <true|false>        设置系统补货。
+> /egs setShopSystem <商店名字> <true|false>        设置店铺系统补货。
+> /egs setGoodSystem <商店名字> <图标名字> <true|false>        设置商品系统补货。
+> /egs setIconName <图标名字> <名字>        设置图标名字。
+> /egs deleteIcon <图标名字>        删除图标。
+> /egs plusPopularity <商店名字> <数量>        增加人气。
+> /egs subtractPopularity <商店名字> <数量>        减少人气。
+|<>为必填参数|
+#### 商店类型
+* **出售**
+* **购买**
+#### 货币类型分为:
 * vault: 金币 
 * playerPoints: 点券 
-* coin: 称号币
-* itemStack: 物品
-* permission: 权限
-* activity: 活动
+* item: 以物易物
 
-#### 金额/数量
-* 类型: 金币,点券,称号币 -> 购买价格
-* 类型: 物品 -> 需求数量(需主手持对应物品)
-* 类型: 其他 -> 无用
-
-#### 天数
-* 称号出售的天数,只能为正整数,0为永久
-
-#### 是否隐藏
-* false隐藏(不会显示在plt shop中) true显示
-#### 描述
-* 称号描述可使用英文逗号 **,** 进行换行
+#### 商店描述
+* 玩家商店可以在GUI商店给自己的商店添加描述
 
 ### 额外注意事项
-* [] 的为必填项  () 的为选填
+* <> 的为必填项 
+* 
 
 ### 例子
 
-1. 新增: 白嫖者称号 玩家点击即可获取永久
-```
-/plt title add not &e白嫖称号 0 0 true 这是称号描述,这是第二行
-```
-
-2. 新增: 金币称号  玩家需要消耗666金币来获取6天(需:Vault支持)
-```
-/plt title add vault &e金币称号 666 6 true 这是个金币称号
-```
-
-3. 新增:点券称号 玩家需要消耗666点券来获取6天(需:PlayerPoints支持)
-```
-/plt title add playerPoints &e点券称号 666 0 false 这是个隐藏起来的点券称号
-```
-
-4. 新增:钻石剑称号 玩家需要消耗钻石剑1个来获取永久称号
-   备注:需要手持钻石剑来输入该命令
-```
-/plt title add itemStack &e钻石剑称号 1 0 false 需要手持钻石剑来输入该命令
-```
-
-5. 新增: 称号币称号: 玩家需要消耗称号币666来获取6天
-```
-/plt title add coin &e称号币称号 666 6 true 这是个称号币称号
-```
-
-6. 新增: 权限称号: 玩家有权限**test**登录后自动获取
-```
-/plt title add permission 权限称号 test 0 true 这是个权限称号,玩家有权限**test**登录后自动获取
-```
-
-7. 新增: 活动称号: 这类称号无法购买,只能OP指令给予
-```
-/plt title add activity 活动称号 0 0 true 这是个活动称号,只能op给予
-```
+1. 使用GUI创建商店
+* 使用/egs openGui打开商店界面后

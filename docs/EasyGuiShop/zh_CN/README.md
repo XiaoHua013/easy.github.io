@@ -2,7 +2,6 @@
 
 # 前言
 > 这是EasyGuiShop-2.x版本的WIKI  
-> 如需1.x版本的WIKI（那就得等）
 
 ## 一、简介
 > EasyGuiShop是一款有点好用且比较简便的GUI商店，这个插件模仿淘宝店铺，玩家可以开自己的店铺  
@@ -39,7 +38,7 @@
 交流群628144367: [点击加入](https://jq.qq.com/?_wv=1027&k=94mGEG8L "点击加入")
 
 ## 三、插件使用统计
-![](https://bstats.org/signatures/bukkit/PlayerTitle.svg)
+![](https://bstats.org/signatures/bukkit/EasyGuiShop.svg)
 
-[点击查看bstats插件统计](https://www.mcbbs.net/plugin.php?id=link_redirect&target=https%3A%2F%2Fbstats.org%2Fplugin%2Fbukkit%2FEasyGuiShop%2F14803 "点击查看bstats插件统计")
+[点击查看bstats插件统计](https://bstats.org/plugin/bukkit/EasyGuiShop/14803 "点击查看bstats插件统计")
 

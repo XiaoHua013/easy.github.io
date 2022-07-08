@@ -1,52 +1,66 @@
 ## 权限
 
-##### 本插件默认无需配置任何权限,服主开箱即用
+##### 需要配置少量权限
 
-##### 很多下面涉及都类型不知道的 低版本请使用tab提醒,1.12以上会自动提醒
-
-# 3.x版本
+# 2.x版本
 
 ## 具体权限
 
-| 权限                    | 用途             | 默认拥有者  |
-|-----------------------|----------------|--------|
-| playerTitle.addReward | 添加称号数量奖励       | op     |
-| playerTitle.buff      | 称号buff相关       | op     |
-| playerTitle.card      | 称号卡相关          | op     |
-| playerTitle.coin      | 称号币相关          | op     |
-| playerTitle.convert   | 转换数据库          | op     |
-| playerTitle.getIp     | 获取服务器信息        | op     |
-| playerTitle.particle  | 称号粒子相关         | op     |
-| playerTitle.player    | 玩家称号相关         | op     |
-| playerTitle.reload    | 重载插件           | op     |
-| playerTitle.title     | 称号相关           | op     |
-| playerTitle.view      | 查看管理           | op     |
-| playerTitle.open      | 称号仓库           | true   |
-| playerTitle.shop      | 称号商城           | true   |
+| 权限                                           |用途                                           |
+|-----------------------------------------------|---------------------------------------------------------|
+## 设置商店限制的：
+
+|EasyGuiShop.gui	                            |使用指令/egs gui的权限
+|EasyGuiShop.help   	                        |使用指令/egs help的权限
+|EasyGuiShop.max.shop.number.1	                |玩家可拥有的最大商店数量,默认为0
+|EasyGuiShop.vault.good	                        |玩家创建金币商店的权限，不给不能创建
+|EasyGuiShop.max.good.name.length.6	            |玩家商品名字的最大长度，默认为0
+|EasyGuiShop.max.good.space.3456   	            |玩家创建的商品的库存容量，默认为0
+|EasyGuiShop.max.shop.name.length.6  	        |玩家商店名字的最大长度，默认为0
+|EasyGuiShop.max.good.number.90   	            |玩家能在一个商店里创建的商品的数量，默认为0
+|-----------------------------------------------|---------------------------------------------------------|
+## 选择性给玩家的：
+
+|EasyGuiShop.playerpoints.good	                |玩家创建点券商店的权限，不给不能创建
+|-----------------------------------------------|---------------------------------------------------------|
+## 只给管理的：
+
+|EasyGuiShop.icon.add	                        |使用指令/egs icon add 图标名字 价格 的权限
+|EasyGuiShop.icon.update   	                    |使用指令/egs icon update 图标名字 价格 的权限
+|EasyGuiShop.icon.remove  	                    |使用指令/egs icon remove 图标名字 的权限
+|EasyGuiShop.good.infinity	                    |使用指令/egs good infinity 商店名字 商品名字 的权限
+|EasyGuiShop.good.deinfinity     	            |使用指令/egs good deinfinity 商店名字 商品名字 的权限
+|EasyGuiShop.shop.infinity	                    |使用指令/egs good infinity 商店名字 的权限
+|EasyGuiShop.shop.deinfinity	                |使用指令/egs good deinfinity 商店名字 的权限
+|-----------------------------------------------|---------------------------------------------------------|
 
 ## 指令(管理员):
 
 | 指令                                                    | 用途                       |
-|-------------------------------------------------------|--------------------------|
-| /plt addReward [称号数量] [类型] [金额]                       | 给对应数量的称号添加奖励             |
-| /plt buff [addBuff/deleteBuff]                        | 新增                       |删除buff|
-| /plt card [create/random]                             | 创建｜随机 称号卡                |
-| /plt coin [give/set/take] [玩家名称] [金额]                 | 给予｜设置｜拿走 玩家称号币           |
-| /plt convert  [类型]                                    | 转换数据，类型可选mysql或者sqlite   |
-| /plt getIp                                            | 获取服务器地址                  |
-| /plt particle [addParticle/deleteParticle]            | 新增｜删除 粒子                 |
-| /plt player [addTitle/setTitle/listTitle/deleteTitle] | 新增｜设置｜查看｜删除 玩家称号         |
-| /plt reload                                           | 重载插件                     |
-| /plt title [add/delete/list/import/description]       | 新增｜删除｜查看｜导入｜描述 称号        |
-| /plt view [类型] (玩家名)                                  | 查看对应gui并管理               |
-| /plt shop                                             | 打开称号商城gui,可选参数类型,不填默认全部  |
-| /plt open                                             | 打开称号仓库gui                |
-
-|[]为必填参数;()为非必填参数|
+|----------------------------------------------------|----------------------------------|
+|/egs help                                           |查看帮助。
+|/egs correctYaml                                    |对所有Yaml进行更正，不会重新载入，请执行后执行reload。
+|/egs reload                                         |重新载入。
+|/egs openGui                                        |打开界面。
+|/egs createIcon <图标名字>                           |增加图标，需要手持物品。
+|/egs setIconVaultPrice <图标名字> <价格>             |设置价格。
+|/egs setIconItemPrice <图标名字> <价格>              |设置价格，需要手持物品。
+|/egs setIconPlayerPointsPrice <图标名字> <价格>      |设置价格。
+|/egs setIconExperiencePrice <图标名字> <价格>        |设置价格。
+|/egs setIconLimitTime <图标名字> <时间>              |设置限购时间。
+|/egs setIconSystem <图标名字> <true|false>           |设置系统补货。
+|/egs setShopSystem <商店名字> <true|false>           |设置店铺系统补货。
+|/egs setGoodSystem <商店名字> <图标名字> <true|false> |设置商品系统补货。
+|/egs setIconName <图标名字> <名字>                   |设置图标名字。
+|/egs deleteIcon <图标名字>                          |删除图标。
+|/egs plusPopularity <商店名字> <数量>                |增加人气。
+|/egs subtractPopularity <商店名字> <数量>            |减少人气。
+|----------------------------------------------|-----------------------------------|
+|<>为必填参数|
 
 ## 指令(玩家):
 
 | 指令                | 用途            |
-|-------------------|---------------|
-| /plt shop         | 打开称号商城gui     |
-| /plt open         | 打开称号仓库gui     |
+|---------------------|---------------|
+| /你在看什么          | 玩家没有指令     |
+| /全程GUI            | 惊不惊喜     |
