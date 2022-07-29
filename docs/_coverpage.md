@@ -6,6 +6,9 @@
 
 * [EasyGuiShop](https://www.mcbbs.net/thread-1321609-1-1.html)
 * [EsayPVP](https://www.mcbbs.net/thread-1339244-1-1.html)
+> 我们的服务器.
 
-[Gitee](https://github.com/XiaoHua013/easy.github.io/)
+* [云朵MC](CloudMC/zh_CN/README)
+
+[服务器](#简式插件列表)
 [快速开始](#简式插件列表)
