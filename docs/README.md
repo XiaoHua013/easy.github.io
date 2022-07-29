@@ -1,10 +1,12 @@
 ## 简式插件列表
 **EasyGuiShop** **简式GUI商店** **免费插件**
+
 [MCBBS](https://www.mcbbs.net/thread-1321609-1-1.html) &ensp;
 [交流群](https://jq.qq.com/?_wv=1027&k=kINUgWOG) &ensp;
 [wiki](EasyGuiShop/zh_CN/)
 
 **EasyPVP** **简式战斗** **免费插件**
+
 [MCBBS](https://www.mcbbs.net/thread-1339244-1-1.html) &ensp;
 [交流群](https://jq.qq.com/?_wv=1027&k=kINUgWOG) &ensp;
 [wiki](EasyPvcv/zh_CN/)
